@@ -1,0 +1,42 @@
+<nav class="bg-gray-900 text-white p-4 h-[72px]">
+    <div class="container mx-auto flex justify-between items-center">
+        <span class="text-xl font-bold">Livia</span>
+        <button id="toggleBtn" class="ml-4 block lg:hidden focus:outline-none">
+            <svg class="w-[24px] h-[24px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <ul id="navList" class="hidden lg:flex space-x-4">
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+            <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+            <li><a href="#" class="hover:text-gray-300">Portfolio</a></li>
+            <li><a href="#" class="hover:text-gray-300">Blog</a></li>
+            <li><a href="#" class="hover:text-gray-300">Todo</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="floatingCard" class="fixed top-0 left-0 w-80 h-full bg-gray-900 z-50 hidden lg:hidden">
+    <div class="flex justify-end p-4">
+        <button id="closeBtn" class="focus:outline-none">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="container flex flex-col h-full ml-8">
+        <ul class="space-y-4 text-left">
+            <li><a href="#" class="block text-xl text-white hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="block text-xl text-white hover:text-gray-300">Contact Us</a></li>
+            <li><a href="#" class="block text-xl text-white hover:text-gray-300">About Us</a></li>
+            <li><a href="#" class="block text-xl text-white hover:text-gray-300">Portfolio</a></li>
+            <li><a href="#" class="block text-xl text-white hover:text-gray-300">Blog</a></li>
+            <li><a href="#" class="block text-xl text-white hover:text-gray-300">Todo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="/js/navbar.js"></script>
