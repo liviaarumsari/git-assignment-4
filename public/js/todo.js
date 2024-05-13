@@ -12,10 +12,13 @@ const createTodoCard = (todo) => {
     card.classList.add('bg-white', 'rounded-md', 'p-4', 'flex', 'items-center', 'justify-between', 'shadow-lg');
     card.dataset.id = todo.id;
 
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.classList.add('mr-2');
-    checkbox.checked = todo.completed;
+    card.innerHTML = `
+        <input type="checkbox" class="mr-2" ${todo.completed ? 'checked' : ''}>
+        <span class="flex-grow mr-2 ${todo.completed ? 'line-through text-gray-500' : ''}">${todo.name}</span>
+        <button class="bg-black/90 text-white px-2 py-1 rounded-md hover:bg-black"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+    `;
+
+    const checkbox = card.querySelector('input[type="checkbox"]');
     checkbox.addEventListener('change', function() {
         todo.completed = this.checked;
         updateLocalStorage();
@@ -26,25 +29,12 @@ const createTodoCard = (todo) => {
         }
     });
 
-    const name = document.createElement('span');
-    name.textContent = todo.name;
-    name.classList.add('flex-grow', 'mr-2');
-    if (todo.completed) {
-        card.classList.add('line-through', 'text-gray-500');
-    }
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.classList.add('bg-black', 'text-white', 'px-4', 'py-1', 'rounded-md');
+    const deleteBtn = card.querySelector('button');
     deleteBtn.addEventListener('click', function() {
         card.remove();
         todos = todos.filter(item => item.id !== todo.id);
         updateLocalStorage();
     });
-
-    card.appendChild(checkbox);
-    card.appendChild(name);
-    card.appendChild(deleteBtn);
 
     todoList.appendChild(card);
 }
