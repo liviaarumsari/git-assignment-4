@@ -14,8 +14,64 @@
     <img src="/assets/landing-page.jpg" class="absolute top-0 left-0 w-full h-full bg-black z-0" alt="Landing Page">
     <div class="z-10 text-center">
         <h1 class="text-5xl md:text-7xl font-bold mb-4 text-white">Welcome to Livia's Final Project</h1>
-        <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold">Order Now
+        <button id="order-now-button"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold">Order Now
         </button>
+    </div>
+</section>
+
+<section id="pop-up-order" class="hidden">
+    <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-70 z-50">
+        <div class="relative bg-white rounded-lg p-8 max-w-md mx-auto">
+            <button id="close-pop-up"
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Order Now</h2>
+            <table class="w-full mb-4">
+                <thead>
+                <tr>
+                    <th class="border px-4 py-2">Product</th>
+                    <th class="border px-4 py-2">Economy</th>
+                    <th class="border px-4 py-2">Premium</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="border px-4 py-2">Design</td>
+                    <td class="border px-4 py-2">2x revision</td>
+                    <td class="border px-4 py-2">5x revision</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Development</td>
+                    <td class="border px-4 py-2">3-5 months</td>
+                    <td class="border px-4 py-2">1-2 months</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Deploy</td>
+                    <td class="border px-4 py-2">Not included</td>
+                    <td class="border px-4 py-2">AWS</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Maintenance</td>
+                    <td class="border px-4 py-2">1 month</td>
+                    <td class="border px-4 py-2">1 year</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="flex justify-end">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold mr-4">
+                    Order Economy
+                </button>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold">
+                    Order Premium
+                </button>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -53,5 +109,6 @@
 <div id="footer-placeholder">
 </div>
 <script type="module" src="/js/main.js"></script>
+<script type="module" src="/js/home.js"></script>
 </body>
 </html>
