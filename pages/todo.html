@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="flex flex-col min-h-screen text-black/90">
+<div id="nav-placeholder">
+</div>
+<!-- Todos Section -->
+<section class="container mx-auto py-20 flex-grow">
+    <h1 class="text-4xl font-bold mb-8 text-center">Todo</h1>
+    <div class="flex mb-4">
+        <label for="todo-input"></label>
+        <input id="todo-input" type="text" class="w-full border-gray-600 rounded-md py-2 px-4 mr-2" placeholder="Enter your todo">
+        <button id="add-todo-btn" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add</button>
+    </div>
+    <div id="todo-list" class="grid grid-cols-1 gap-4"></div>
+</section>
+<div id="footer-placeholder">
+</div>
+<script type="module" src="/js/main.js"></script>
+<script type="module" src="/js/todo.js"></script>
+</body>
+</html>
